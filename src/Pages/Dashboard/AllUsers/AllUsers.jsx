@@ -12,7 +12,7 @@ const AllUsers = () => {
    } =useQuery({
     queryKey:['users'],
     queryFn:async () => {
-      const res = await fetch("http://localhost:7001/users");
+      const res = await fetch("https://doctors-sigma.vercel.app/users");
       const data = await res.json();
       return data;
     },
@@ -20,7 +20,7 @@ const AllUsers = () => {
 
 
   const handleMakeAdmin = (id) => {
-   fetch(`http://localhost:7001/users/admin/${id}`,{
+   fetch(`https://doctors-sigma.vercel.app/users/admin/${id}`,{
        method:"PUT",
    })
     .then(res=>res.json())
@@ -33,7 +33,7 @@ const AllUsers = () => {
   }
 
   const handleCancelAdmin = (id) => {
-    fetch(`http://localhost:7001/users/remove-admin/${id}`,{
+    fetch(`https://doctors-sigma.vercel.app/users/remove-admin/${id}`,{
         method:"PUT",
     })
      .then(res=>res.json())
@@ -46,7 +46,7 @@ const AllUsers = () => {
    }
 
    const handleDeleteUser = (id) => {
-    fetch(`http://localhost:7001/users/delete-user/${id}`, {
+    fetch(`https://doctors-sigma.vercel.app/users/delete-user/${id}`, {
         method: "DELETE",
     })
     .then(res => res.json())

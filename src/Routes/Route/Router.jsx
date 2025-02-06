@@ -79,7 +79,7 @@ const router =createBrowserRouter([
           },
           {
             path:"/dashboard/payment/:id",
-            loader:({params})=>fetch(`http://localhost:7001/bookings/${params.id}`),
+            loader:({params})=>fetch(`https://doctors-sigma.vercel.app/bookings/${params.id}`),
             element: <AdminRoute>
              <Payment>
              

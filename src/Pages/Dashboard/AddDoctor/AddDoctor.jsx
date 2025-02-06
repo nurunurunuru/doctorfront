@@ -11,7 +11,7 @@ const AddDoctor = () => {
     const { data: specialties = [], isLoading } = useQuery({
         queryKey: ['appointmentSpecialty'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:7001/appointmentSpecialty');
+            const res = await fetch('https://doctors-sigma.vercel.app/appointmentSpecialty');
             const data = await res.json();
             return data;
         },
@@ -31,7 +31,7 @@ const AddDoctor = () => {
        
         
 
-        fetch('http://localhost:7001/doctors', {
+        fetch('https://doctors-sigma.vercel.app/doctors', {
             method: 'POST',
             body: formData
         })

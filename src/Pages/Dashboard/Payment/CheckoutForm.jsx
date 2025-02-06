@@ -17,7 +17,7 @@ const CheckoutForm = ({ booking }) => {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost:7001/create-payment-intent", {
+        fetch("https://doctors-sigma.vercel.app/create-payment-intent", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ price }),
@@ -79,7 +79,7 @@ const CheckoutForm = ({ booking }) => {
                 bookingId: _id,
             };
 
-            fetch('http://localhost:7001/payments', {
+            fetch('https://doctors-sigma.vercel.app/payments', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payment),

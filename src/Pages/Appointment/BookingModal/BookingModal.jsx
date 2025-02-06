@@ -26,7 +26,7 @@ const BookingModal = ({treatment,setTreatment,selectedDate, refetch }) => {
             price
         };
         //console.log(booking);
-        fetch("http://localhost:7001/bookings",{
+        fetch("https://doctors-sigma.vercel.app/bookings",{
           method:"POST",
           headers:{
             'content-type':'application/json',
